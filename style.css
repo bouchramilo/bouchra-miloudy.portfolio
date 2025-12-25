@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #fbbf24;
+    /* Amber-400 */
+    --bg-dark: #000000;
+    /* Slate-900 */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Text Gradients */
+.text-gradient {
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section Spacing */
+section {
+    padding: 6rem 1.5rem;
+}
+
+/* Navigation Active State */
+.nav-link.active {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Navigation Responsive Styles */
+#navbar {
+    min-height: 60px;
+}
+
+@media (max-width: 640px) {
+    #navbar {
+        min-height: 56px;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Mobile Navigation Improvements */
+#nav-mobile {
+    will-change: transform;
+}
+
+#nav-mobile.translate-x-full {
+    visibility: hidden;
+}
+
+#nav-mobile:not(.translate-x-full) {
+    visibility: visible;
+}
+
+/* Smooth transitions for mobile menu */
+@media (max-width: 1023px) {
+    #nav-mobile ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    #nav-mobile ul li a:hover {
+        background-color: rgba(251, 191, 36, 0.1);
+    }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) and (max-width: 1023px) {
+    #navbar {
+        padding: 1rem 1.5rem;
+    }
+}

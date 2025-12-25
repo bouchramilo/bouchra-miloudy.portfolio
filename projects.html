@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio de Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Bouchra MILOUDY | Portfolio</title>
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.4);
+        }
+    </style>
+</head>
+
+<body class="text-slate-200 antialiased selection:bg-amber-400 selection:text-slate-900">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="myVideo">
+        <source src="assets/images/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navigation -->
+    <header id="navbar"
+        class="fixed w-full top-0 z-50 px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center transition-all duration-300">
+        <div class="logo" data-aos="fade-down">
+            <a href="index.html" class="text-xl sm:text-2xl font-bold text-white font-['Outfit'] tracking-wider">
+                B<span class="text-amber-400">.</span>M
+            </a>
+        </div>
+
+        <nav class="hidden lg:flex gap-6 xl:gap-8" data-aos="fade-down" data-aos-delay="100">
+            <a href="index.html#home"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Accueil</a>
+            <a href="index.html#about" class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">À
+                Propos</a>
+            <a href="index.html#skills"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Compétences</a>
+            <a href="index.html#formations"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Formations</a>
+            <a href="index.html#projects"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Projets</a>
+            <a href="index.html#contact"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden lg:block" data-aos="fade-down" data-aos-delay="200">
+            <button
+                onclick="window.open('CVs/Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle.pdf')"
+                class="px-4 xl:px-6 py-2 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 font-semibold text-sm xl:text-base transition-all duration-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]">
+                Voir CV
+            </button>
+        </div>
+
+        <button id="menu" class="lg:hidden text-white text-2xl sm:text-3xl cursor-pointer hover:text-amber-400 transition-colors z-50" aria-label="Menu">
+            <i class='bx bx-menu'></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="nav-mobile"
+            class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center gap-6 sm:gap-8 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-mobile"
+                class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white text-3xl sm:text-4xl cursor-pointer hover:text-amber-400 transition-colors z-50" aria-label="Fermer">
+                <i class='bx bx-x'></i>
+            </button>
+            <ul class="flex flex-col gap-4 sm:gap-6 text-center px-4">
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#home">ACCUEIL</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2" href="index.html#about">À
+                        PROPOS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#skills">COMPÉTENCES</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#formations">FORMATIONS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#projects">PROJETS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <div class="mt-4 sm:mt-6">
+                <button
+                    onclick="window.open('CVs/Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle.pdf')"
+                    class="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 font-semibold text-sm sm:text-base transition-all duration-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]">
+                    Voir CV
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 ">
+            <div class="container mx-auto px-1 sm:px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center" data-aos="fade-up">Mes <span
+                        class="text-amber-400">Projets</span></h2>
+
+
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Projects will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 border-t border-white/10 bg-black/40 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p class="text-slate-500">
+                &copy; 2025 Bouchra MILOUDY. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="projects.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/60', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-black/60', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu');
+        const closeBtn = document.getElementById('close-mobile');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (menuBtn && closeBtn && navMobile) {
+            const openMenu = () => {
+                navMobile.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                menuBtn.style.display = 'none'; // Hide menu button when open
+            };
+
+            const closeMenu = () => {
+                navMobile.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+                menuBtn.style.display = 'block'; // Show menu button when closed
+            };
+
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+
+            // Close menu when clicking a link
+            document.querySelectorAll('#nav-mobile a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close menu when clicking outside (on the backdrop)
+            navMobile.addEventListener('click', (e) => {
+                if (e.target === navMobile) {
+                    closeMenu();
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !navMobile.classList.contains('translate-x-full')) {
+                    closeMenu();
+                }
+            });
+
+            // Handle window resize - close mobile menu if window becomes large
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024 && !navMobile.classList.contains('translate-x-full')) {
+                    closeMenu();
+                }
+            });
+        }
+
+        // Load projects from JavaScript array
+        function loadProjects() {
+            
+            const projectsGrid = document.getElementById('projects-grid');
+
+            console.log(projects[0]["technologies"])
+            projects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'glass-card rounded-2xl overflow-hidden group hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-300';
+                projectCard.setAttribute('data-aos', 'fade-up');
+                projectCard.setAttribute('data-aos-delay', (index * 100).toString());
+
+                const technologies = project.technologies.map(tech =>
+                    `<span class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">${tech}</span>`
+                ).join('');
+
+                projectCard.innerHTML = `
+                     
+                        <div class="h-48 bg-black relative overflow-hidden">
+                            <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10"></div> -->
+                            <div class="w-full h-full flex items-center justify-center text-slate-600">
+                                <img src="${project.image}" class='bx bx-image text-4xl'>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-end gap-4">
+                                <a href="${project.github}"
+                                    class="text-white hover:text-amber-400 transition-colors text-xl"><i
+                                        class='bx bxl-github'></i></a>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                ${project.title}</h3>
+                            <p class="text-slate-400 text-sm mb-4">
+                            ${project.description}</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                ${technologies}
+                            </div>
+                        </div>
+                `;
+
+                projectsGrid.appendChild(projectCard);
+            });
+        }
+
+        // Load projects when page loads
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
+</body>
+
+</html>

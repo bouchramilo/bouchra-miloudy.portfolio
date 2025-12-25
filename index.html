@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio de Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Bouchra MILOUDY | Portfolio</title>
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.4);
+        }
+    </style>
+</head>
+
+<body class="text-slate-200 antialiased selection:bg-amber-400 selection:text-slate-900">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="myVideo">
+        <source src="assets/images/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navigation -->
+    <header id="navbar"
+        class="fixed w-full top-0 z-50 px-2 sm:px-4 py-3 sm:py-4 flex justify-between items-center transition-all duration-300">
+        <div class="logo" data-aos="fade-down">
+            <a href="index.html" class="text-xl sm:text-2xl font-bold text-white font-['Outfit'] tracking-wider">
+                B<span class="text-amber-400">.</span>M
+            </a>
+        </div>
+
+        <nav class="hidden lg:flex gap-4 xl:gap-6" data-aos="fade-down" data-aos-delay="100">
+            <a href="index.html#home"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Accueil</a>
+            <a href="index.html#about"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">À
+                Propos</a>
+            <a href="index.html#skills"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Compétences</a>
+            <a href="index.html#formations"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Formations</a>
+            <a href="index.html#projects"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Projets</a>
+            <a href="index.html#contact"
+                class="nav-link text-xs xl:text-sm uppercase tracking-widest hover:text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden lg:block" data-aos="fade-down" data-aos-delay="200">
+            <button
+                onclick="window.open('CVs/Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle.pdf')"
+                class="px-4 xl:px-6 py-2 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 font-semibold text-sm xl:text-base transition-all duration-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]">
+                Voir CV
+            </button>
+        </div>
+
+        <button id="menu"
+            class="lg:hidden text-white text-2xl sm:text-3xl cursor-pointer hover:text-amber-400 transition-colors z-50"
+            aria-label="Menu">
+            <i class='bx bx-menu'></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="nav-mobile"
+            class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center gap-6 sm:gap-8 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-mobile"
+                class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white text-3xl sm:text-4xl cursor-pointer hover:text-amber-400 transition-colors z-50"
+                aria-label="Fermer">
+                <i class='bx bx-x'></i>
+            </button>
+            <ul class="flex flex-col gap-4 sm:gap-6 text-center px-4">
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#home">ACCUEIL</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#about">À
+                        PROPOS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#skills">COMPÉTENCES</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#formations">FORMATIONS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#projects">PROJETS</a></li>
+                <li><a class="text-base sm:text-lg text-white hover:text-amber-400 font-light tracking-widest transition-colors py-2"
+                        href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <div class="mt-4 sm:mt-6">
+                <button
+                    onclick="window.open('CVs/Bouchra MILOUDY - Développeuse Full Stack & Intelligence Artificielle.pdf')"
+                    class="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 font-semibold text-sm sm:text-base transition-all duration-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]">
+                    Voir CV
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative px-1 sm:px-6">
+            <div class="text-center z-10 max-w-4xl mx-auto">
+                <p class="text-amber-400 font-medium tracking-[0.2em] mb-4" data-aos="fade-up">BONJOUR, JE SUIS</p>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Bouchra <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">MILOUDY</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-slate-300 font-light mb-10" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Développeuse Full Stack & Intelligence Artificielle
+                </h2>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <a href="#projects"
+                        class="px-8 py-3 rounded-full bg-amber-400 text-slate-900 font-bold hover:bg-amber-300 transition-all shadow-[0_0_20px_rgba(251,191,36,0.4)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)]">
+                        Voir mes projets
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-3 rounded-full border border-white/30 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 transition-all">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+                <i class='bx bx-chevron-down text-4xl'></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="relative py-20 flex w-full">
+            <div class="container mx-auto px-1 sm:px-6">
+                <div class="glass-card rounded-3xl p-8 md:p-12 max-w-5xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center"><span class="text-amber-400">À</span>
+                        Propos</h2>
+                    <div class="flex flex-col md:flex-row gap-12 items-center">
+                        <div class="w-full md:w-1/3">
+                            <div
+                                class="relative aspect-3/4 rounded-2xl overflow-hidden border-2 border-amber-400/30 shadow-2xl group">
+                                <!-- Placeholder for Profile Image if available, otherwise a gradient or avatar -->
+                                <div
+                                    class="w-full h-full bg-slate-800 flex items-center justify-center text-6xl text-amber-400">
+                                    <img src="./assets/images/photo_2.JPG" alt="photo">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-amber-400/5 group-hover:bg-transparent transition-all duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/3 text-sm sm:text-lg text-slate-300 leading-relaxed space-y-6">
+                            <p>
+                                Passionnée par le développement web et l'intelligence artificielle, je conçois des
+                                solutions digitales innovantes, performantes et centrées sur l'utilisateur. Mon
+                                expertise couvre l'ensemble du cycle de développement : de l'analyse des besoins à la
+                                conception d'interfaces intuitives, jusqu'à l'implémentation d'algorithmes intelligents
+                                et de systèmes automatisés.
+                            </p>
+                            <p>
+                                Curieuse et rigoureuse, j'accorde une importance particulière à la qualité du code, à
+                                l'optimisation des performances et à la création d'expériences fluides. Mon parcours m'a
+                                permis d'acquérir une double compétence en développement logiciel et en data science,
+                                faisant de moi un profil polyvalent capable de transformer des données en solutions
+                                concrètes à forte valeur ajoutée.
+                            </p>
+                            <p>
+                                Toujours motivée par de nouveaux défis, je cherche à rejoindre des projets où je peux
+                                contribuer à la construction d'outils modernes, intelligents et impactants, tout en
+                                continuant à développer mes compétences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center" data-aos="fade-up">
+                    Mes <span class="text-amber-400">Compétences</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Frontend -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up">
+                        <div
+                            class="w-12 h-12 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 text-2xl mb-4">
+                            <i class='bx bx-window-alt'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Frontend</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-amber-400'></i> HTML5
+                                / CSS3</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-amber-400'></i>
+                                JavaScript</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-amber-400'></i>
+                                React.js / Vue.js</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-amber-400'></i>
+                                Tailwind CSS / Bootstrap</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-amber-400'></i> Blade
+                                (Laravel)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-4">
+                            <i class='bx bx-code-curly'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Backend</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-blue-400'></i> PHP /
+                                Laravel</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-blue-400'></i> Python
+                                / FastAPI</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-blue-400'></i> API
+                                RESTful</li>
+                        </ul>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="150">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 text-2xl mb-4">
+                            <i class='bx bxs-data'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Base de données</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-orange-400'></i>
+                                MySQL</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-orange-400'></i>
+                                PostgreSQL</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-orange-400'></i>
+                                MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <!-- AI & Data -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl mb-4">
+                            <i class='bx bx-bot'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">IA & Data</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-purple-400'></i>
+                                Machine Learning</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-purple-400'></i> Deep
+                                Learning</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-purple-400'></i>
+                                TensorFlow / PyTorch</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-purple-400'></i> NLP
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="250">
+                        <div
+                            class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-400 text-2xl mb-4">
+                            <i class='bx bx-cog'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Outils & DevOps</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-pink-400'></i> Git /
+                                GitHub</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-pink-400'></i> Docker
+                            </li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-pink-400'></i> Jira /
+                                ClickUp</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-pink-400'></i> Figma
+                                / Postman</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-pink-400'></i> Agile
+                                / Scrum</li>
+                        </ul>
+                    </div>
+
+                    <!-- Operating Systems -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-700/20 flex items-center justify-center text-blue-600 text-2xl mb-4">
+                            <i class='bx bx-desktop'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Systèmes</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-blue-600'></i> Linux
+                                / Ubuntu</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-blue-600'></i>
+                                Windows</li>
+                        </ul>
+                    </div>
+
+                    <!-- Design Tools -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="350">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-2xl mb-4">
+                            <i class='bx bx-shape-square'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Outils de Conception</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-green-400'></i> UML
+                            </li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-green-400'></i>
+                                Merise</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-green-400'></i> ERD
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Big Data -->
+                    <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div
+                            class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400 text-2xl mb-4">
+                            <i class='bx bx-data'></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Big Data</h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-yellow-400'></i>
+                                Apache Spark</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-yellow-400'></i>
+                                Apache Airflow</li>
+                            <li class="flex items-center gap-2"><i class='bx bxs-check-circle text-yellow-400'></i>
+                                Pipeline ETL / ELT</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Formations Section -->
+        <section id="formations" class="py-20 bg-black/20">
+            <div class="container mx-auto px-2 sm:px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center" data-aos="fade-up">Mon <span
+                        class="text-amber-400">Parcours</span></h2>
+
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <!-- Education Item 1 -->
+                    <div class="glass p-8 rounded-2xl relative border-l-4 border-amber-400" data-aos="fade-up">
+                        <div
+                            class="absolute -left-[42px] top-8 w-5 h-5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.6)] hidden md:block">
+                        </div>
+                        <span class="text-amber-400 font-mono text-sm mb-2 block">2019 - 2020</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Baccalauréat - Sciences Math Option A</h3>
+                        <h4 class="text-xl text-slate-300 mb-4">Lycée Hassan 2 , Midelt</h4>
+                        
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="glass p-8 rounded-2xl relative border-l-4 border-amber-400" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="absolute -left-[42px] top-8 w-5 h-5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.6)] hidden md:block">
+                        </div>
+                        <span class="text-amber-400 font-mono text-sm mb-2 block">2020 - 2024</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Licence - Sciences Mathématiques et Informatiques
+                        </h3>
+                        <h4 class="text-xl text-slate-300 mb-4">Faculté des sciences / Université Moulay Ismail, Meknès
+                        </h4>
+                        
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="glass p-8 rounded-2xl relative border-l-4 border-amber-400" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="absolute -left-[42px] top-8 w-5 h-5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.6)] hidden md:block">
+                        </div>
+                        <span class="text-amber-400 font-mono text-sm mb-2 block">2024 - 2026 (En Cours)</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Certificat YouCode</h3>
+                        <h4 class="text-xl text-slate-300 mb-4">YouCode, Safi</h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center" data-aos="fade-up">Mes <span
+                        class="text-amber-400">Projets</span></h2>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Project 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-300"
+                        data-aos="fade-up">
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10"></div> -->
+                            <div class="w-full h-full flex items-center justify-center text-slate-600">
+                                <img src="assets\images\projects\moneymind.webp" class='bx bx-image text-4xl'>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-full">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                MoneyMind</h3>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Application de gestion financière utilisant Laravel,
+                                PostgreSQL et JavaScript, avec suggestions IA et tableaux de bord
+                                statistiques. </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">Laravel</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">PostgreSQL</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">Javascript</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">AlpineJS</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">API
+                                    Gemini</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/bouchramilo/MoneyMind"
+                                    class="text-white hover:text-amber-400 transition-colors text-xl"><i
+                                        class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10"></div> -->
+                            <div class="w-full h-full flex items-center justify-center text-slate-600">
+                                <img src="assets\images\projects\football.webp" class='bx bx-image text-4xl'>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                PlateForme d'Analyse Prédictive du Football Professionnel
+                                Projet b</h3>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Projet basé sur un modèle ETL : extraction des données (Selenium),
+                                nettoyage et transformation des données, puis chargement dans une
+                                base PostgreSQL. Création d'un dashboard Streamlit pour visualiser les
+                                performances des joueurs et équipes.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">Python</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">Spark</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">ETL</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/bouchramilo/FootData_Analytics_Modeling"
+                                    class="text-white hover:text-amber-400 transition-colors text-xl"><i
+                                        class='bx bxl-github'></i></a>
+                                <!-- <a href="#" class="text-white hover:text-amber-400 transition-colors text-xl"><i
+                                        class='bx bx-link-external'></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10"></div> -->
+                            <div class="w-full h-full flex items-center justify-center text-slate-600">
+                                <img src="assets\images\projects\image_1.webp" class='bx bx-image text-4xl'>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                Système d'Analyse d'Images Médicales (Deep Learning)</h3>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Projet réalisé en binôme combinant la classification de cellules
+                                leucémiques (PyTorch – GoogLeNet avec Transfer Learning) et la
+                                détection de tumeurs cérébrales (YOLOv8). Comprend la préparation des
+                                données, l'évaluation des modèles et l'intégration via Streamlit pour une
+                                utilisation interactive. </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">PyTorch</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">YOLOv8</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">Transfer
+                                    Learning</span>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-white/5 text-xs text-amber-400 border border-amber-400/20">GoogLeNet</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/bouchramilo/Diagnostic-multimodal"
+                                    class="text-white hover:text-amber-400 transition-colors text-xl"><i
+                                        class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="flex justify-center items-center transition-all duration-300">
+                    <a href="projects.html"
+                        class="px-8 py-3 rounded-full border border-amber-400/30 bg-amber-400/5 backdrop-blur-sm text-amber-400 font-semibold hover:bg-amber-400/10 transition-all">
+                        Explorer Plus
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="glass-card rounded-3xl p-8 md:p-16 max-w-4xl mx-auto" data-aos="zoom-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Me <span
+                            class="text-amber-400">Contacter</span></h2>
+                    <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
+                        Vous avez un projet en tête ou vous souhaitez simplement échanger ? N'hésitez pas à me contacter
+                        via mes réseaux sociaux.
+                    </p>
+
+                    <div class="space-y-6 max-w-lg mx-auto">
+                        <div>
+                            <p class="text-xs sm:text-xl"><span class="text-amber-400 text-xs sm:text-xl">Email</span> : miloudybouchra01@gmail.com</p>
+                        </div>
+                        <div>
+                            <p class="text-xs sm:text-xl"><span class="text-amber-400 text-xs sm:text-xl">Numéro de téléphone</span> : 07 71 25 79 27</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-8 mt-12">
+                        <a href="https://www.linkedin.com/in/bouchra-miloudy-197824329/"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 text-2xl"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/bouchramilo"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 text-2xl"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://x.com/BouchraMil2713"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 text-2xl"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="https://www.instagram.com/bou13chra27/"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 text-2xl"><i
+                                class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 border-t border-white/10 bg-black/40 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p class="text-slate-500">
+                &copy; 2025 Bouchra MILOUDY. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/60', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-black/60', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu');
+        const closeBtn = document.getElementById('close-mobile');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (menuBtn && closeBtn && navMobile) {
+            const openMenu = () => {
+                navMobile.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                menuBtn.style.display = 'none'; // Hide menu button when open
+            };
+
+            const closeMenu = () => {
+                navMobile.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+                menuBtn.style.display = 'block'; // Show menu button when closed
+            };
+
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+
+            // Close menu when clicking a link
+            document.querySelectorAll('#nav-mobile a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close menu when clicking outside (on the backdrop)
+            navMobile.addEventListener('click', (e) => {
+                if (e.target === navMobile) {
+                    closeMenu();
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !navMobile.classList.contains('translate-x-full')) {
+                    closeMenu();
+                }
+            });
+
+            // Handle window resize - close mobile menu if window becomes large
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024 && !navMobile.classList.contains('translate-x-full')) {
+                    closeMenu();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
