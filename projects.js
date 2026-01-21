@@ -35,6 +35,22 @@ const projects = [
         "github": "https://github.com/bouchramilo/YouCommunity"
     },
     {
+        "title": "YouLogiX – Plateforme de Gestion Logistique",
+        "description": "YouLogiX est une plateforme backend de gestion logistique conçue pour automatiser et centraliser les opérations de livraison de colis. Elle permet la création et le suivi des colis, l’affectation aux livreurs, la gestion des statuts et la traçabilité complète des livraisons via une API REST sécurisée et documentée.",
+        "image": "https://maghreb.simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fpng%2F1767538577-695a80b73f9b3191702071.png&w=1280&q=75",
+        "technologies": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "SQLAlchemy",
+            "Pydantic",
+            "Docker",
+            "Swagger / OpenAPI",
+            "Pytest"
+        ],
+        "github": "https://github.com/bouchramilo/youexpress_logistics_api"
+    },
+    {
         "title": "Prédiction de l’attrition bancaire",
         "description": "Développement d’un pipeline de machine learning complet pour prédire la perte de clients dans le secteur bancaire. Le projet inclut le prétraitement et l’analyse exploratoire des données avec PySpark, la gestion du déséquilibre des classes, l’entraînement et l’optimisation d’un modèle MLlib, le stockage des données prétraitées dans MongoDB, et la visualisation interactive des résultats via Streamlit pour faciliter la prise de décision.",
         "image": "https://fr.diabolocom.com/wp-content/uploads/blog_churn_fr.jpg",
@@ -52,21 +68,21 @@ const projects = [
         "title": "AeroStream Analytics",
         "description": "AeroStream Analytics est une solution Data & IA permettant d'analyser automatiquement les avis clients des compagnies aériennes afin d'évaluer leur niveau de satisfaction. Le projet s'appuie sur des techniques de traitement du langage naturel (NLP), de Machine Learning, de streaming de données, et de visualisation temps réel.",
         "image": "assets/images/projects/AeroStream_Analytics.webp",
-        "technologies": ["Python", "PostgreSQL", "ChromaDB", "FastAPI", "Docker", "AirFlow", "NLP" ],
+        "technologies": ["Python", "PostgreSQL", "ChromaDB", "FastAPI", "Docker", "AirFlow", "NLP"],
         "github": "https://github.com/bouchramilo/AeroStream_Analytics"
     },
     {
         "title": "News Article Classification Pipeline",
         "description": "Système de classification automatique d’articles d’actualité basé sur le NLP et le Machine Learning, couvrant les catégories World, Sports, Business et Sci/Tech, avec une pipeline complète (embeddings, entraînement, évaluation) orchestrée par Airflow, stockée dans ChromaDB et déployée via Streamlit et Docker.",
         "image": "https://maghreb.simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fjpg%2Fa1d80612-2bf2-425d-b851-b644a6bf2cd5-6934748e87eb2314085391.jpg&w=1280&q=75",
-        "technologies": ["Python", "Hugging Face Datasets", "NLTK", "Regex", "Docker", "NLP", "AirFlow", "Sentence Transformers", "ChromaDB", "Streamlit" ],
+        "technologies": ["Python", "Hugging Face Datasets", "NLTK", "Regex", "Docker", "NLP", "AirFlow", "Sentence Transformers", "ChromaDB", "Streamlit"],
         "github": "https://github.com/bouchramilo/News_Classifier"
     },
     {
         "title": "YouQuote",
         "description": "YouQuote est une application web full stack de gestion de citations, développée avec une API REST en Laravel et un frontend en React.js, intégrant l’authentification JWT, la gestion des rôles (Admin / User), le CRUD des citations, les likes, favoris, catégories, tags, les citations aléatoires, la popularité et les soft deletes, le tout via une interface moderne et sécurisée.",
         "image": "https://maghreb.simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fpng%2Fcodequiz-14-67ced4fb508d6163953360.png&w=1280&q=75",
-        "technologies": ["REST API (Laravel)", "MySQL", "React.js", "JavaScript", "Fetch", "JWT Authentication", "Tailwind CSS" ],
+        "technologies": ["REST API (Laravel)", "MySQL", "React.js", "JavaScript", "Fetch", "JWT Authentication", "Tailwind CSS"],
         "github": "https://github.com/bouchramilo/YouQuote_Frontend"
     },
     {
